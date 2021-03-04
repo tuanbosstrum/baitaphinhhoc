@@ -9,7 +9,7 @@ package hinhtron;
  *
  * @author HUY TUAN
  */
-public class circle {
+public class circle extends Shape {
 
     private int radius;
     private int x, y;
@@ -22,10 +22,12 @@ public class circle {
         this.x = x;
         this.y = y;
     }
+    @Override
     public double calcPerimeter(){
         double result = 2*Math.PI*this.radius;
         return result;
     }
+    @Override
     public double calcArea(){
         double result = Math.PI*this.radius*this.radius;
         return result;

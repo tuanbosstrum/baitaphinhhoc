@@ -9,7 +9,7 @@ package hinhtron;
  *
  * @author HUY TUAN
  */
-public class rectangle {
+public class rectangle extends Shape  {
 
     private int upper_x;
     private int upper_y;
@@ -30,10 +30,12 @@ public class rectangle {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    @Override
     public double calcPerimeter() {
         return (2 * Math.abs(upper_x - lower_x) + (Math.abs(upper_y - lower_y)));
     }
 
+    @Override
     public double calcArea() {
         return Math.abs((upper_x - lower_x) * (upper_y - lower_y));
     }
